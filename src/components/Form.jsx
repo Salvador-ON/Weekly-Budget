@@ -1,7 +1,8 @@
 import React from "react";
 import shortid from 'shortid'
+import PropTypes from 'prop-types'
 
-const Form = () => {
+const Form = ({useGasto, SetCrearGasto}) => {
 
   const [nombre, useNombre]=React.useState('');
   const [cantidad, useCantidad]=React.useState(0);
@@ -11,12 +12,28 @@ const Form = () => {
     useNombre(e.target.value)
   }
 
+  const ResetNombre = (value) =>{
+    useNombre(value)
+  }
+
+  const ResetCantidad = (value) =>{
+    useCantidad(value)
+  }
+
   const SetCantidad = (e) =>{
     useCantidad(e.target.value)
   }
 
   const SetError = (value) =>{
     useError(value)
+  }
+
+  const SetGasto = (value) =>{
+    useGasto(value)
+  }
+
+  const SetCrearGasto2 = value =>{
+    SetCrearGasto(value)
   }
 
   const agregarGasto = e => {
@@ -28,10 +45,15 @@ const Form = () => {
     SetError(false)
     const gasto = {
       nombre,
-      cantidad,
+      cantidad: parseInt(cantidad,10) ,
       id: shortid.generate()
     }
-    console.log(gasto);
+ 
+    
+    SetCrearGasto2(true);
+    SetGasto(gasto);
+    ResetNombre('');
+    ResetCantidad(0);
   }
 
   
@@ -75,5 +97,11 @@ const Form = () => {
     </React.Fragment>
   );
 };
+
+Form.propTypes = {
+  useGasto: PropTypes.func.isRequired, 
+  SetCrearGasto : PropTypes.func.isRequired
+
+}
 
 export default Form;

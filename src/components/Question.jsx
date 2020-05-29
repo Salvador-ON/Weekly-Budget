@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types'
 
 const Question = ({ usePresupuesto, useRestante, useShowQuestion }) => {
   const [cantidad, useCantidad] = React.useState(0);
@@ -16,6 +17,10 @@ const Question = ({ usePresupuesto, useRestante, useShowQuestion }) => {
     usePresupuesto(value);
   };
 
+  const SetRestante = (value) => {
+    useRestante(value);
+  };
+
   const SetShow = (value) => {
     useShowQuestion(value);
   };
@@ -29,6 +34,7 @@ const Question = ({ usePresupuesto, useRestante, useShowQuestion }) => {
     }
     SetError(false);
     SetPresupuesto(cantidad);
+    SetRestante(cantidad)
     SetShow(false);
   };
 
@@ -65,5 +71,11 @@ const Question = ({ usePresupuesto, useRestante, useShowQuestion }) => {
     </React.Fragment>
   );
 };
+
+Question.propTypes = {
+  usePresupuesto: PropTypes.func.isRequired, 
+  useRestante : PropTypes.func.isRequired,
+  useShowQuestion: PropTypes.func.isRequired
+}
 
 export default Question;
