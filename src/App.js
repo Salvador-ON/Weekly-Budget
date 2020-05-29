@@ -52,10 +52,10 @@ function App() {
           />
         ) : (
           <React.Fragment>
-            <div className="col-4 mx-auto bg-light p-2 rounded">
+            <div className="my-2 my-md-0 col-10 col-md-4 mx-auto bg-light p-2 rounded">
               <Form useGasto={useGasto} SetCrearGasto={SetCrearGasto}/>
             </div>
-            <div className="col-4 mx-auto bg-light p-2 rounded">
+            <div className="my-2 my-md-0 col-10 col-md-4 mx-auto bg-light p-2 rounded">
             <h2 className="h1 text-center text-orange py-4" >Expenses</h2>
               <BudgetControl presupuesto={presupuesto} restante={restante}/>
               <Expenses gastos={gastos}/>

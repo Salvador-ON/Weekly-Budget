@@ -8,8 +8,8 @@ const BudgetControl = ({presupuesto, restante}) => {
 
   return (
     <React.Fragment>
-      <div className="alert alert-info" role="alert">Presupuesto: ${presupuesto}</div>
-      <div className={alertStyle} >Restante: ${restante}</div>
+      <div className="alert alert-info" role="alert">Budget: ${presupuesto}</div>
+      <div className={alertStyle} >Remaining: ${restante}</div>
     </React.Fragment>
     );
 }

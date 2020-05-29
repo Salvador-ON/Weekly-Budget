@@ -40,7 +40,7 @@ const Question = ({ usePresupuesto, useRestante, useShowQuestion }) => {
 
   return (
     <React.Fragment>
-      <div className="col-8 mx-auto bg-light p-2 rounded">
+      <div className="col-10 mx-auto bg-light p-2 rounded">
         <form className="mx-4 py-4" onSubmit={agregarPresupuesto}>
           <div className="form-group">
             <h1 className="h1 text-center text-orange pb-4">

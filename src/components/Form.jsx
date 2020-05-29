@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 const Form = ({useGasto, SetCrearGasto}) => {
 
   const [nombre, useNombre]=React.useState('');
-  const [cantidad, useCantidad]=React.useState(0);
+  const [cantidad, useCantidad]=React.useState("");
   const [error, useError]=React.useState(false)
 
   const SetNombre = (e) =>{
@@ -53,7 +53,7 @@ const Form = ({useGasto, SetCrearGasto}) => {
     SetCrearGasto2(true);
     SetGasto(gasto);
     ResetNombre('');
-    ResetCantidad(0);
+    ResetCantidad('');
   }
 
   

@@ -6,14 +6,14 @@ import PropTypes from 'prop-types'
 const Expenses = ({gastos}) => {
   return ( 
     <React.Fragment>
-      <div>
+
         
         <ul className="list-group list-group-flush">
         {gastos.map(gasto =>(
           <Expense gasto={gasto} key={gasto.id}/>
         ))}
         </ul>
-      </div>
+     
     </React.Fragment>
    );
 }
