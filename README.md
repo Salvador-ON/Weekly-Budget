@@ -12,7 +12,7 @@
 
 ## Live Version
 
-Live version [here](https://sticky-notes-reminders.netlify.app//).
+Live version [here](https://weekly-budget-app.netlify.app/).
 
 ## Author
 
